@@ -225,17 +225,22 @@
   <div class="abstract-box">
     <div class="abstract-title">Abstract</div>
     <p>
-      Interacting with 3D scenes requires precise localization of fine-grained functional elements such as handles and switches. Existing open-vocabulary 3D perception pipelines predominantly operate in an open-loop manner, making them vulnerable to semantic ambiguity and error propagation.
+      	In this paper, we address the problem of <strong>Task-Driven Fine-Grained Affordance Grounding</strong> , which requires agents to precisely localize functional elements (e.g., handles, switches) within complex 3D scenes based on natural language instructions. 
+        While existing pipelines provide a foundation for this task, they predominantly rely on a single-pass projection approach, suffering from semantic ambiguity and error propagation. 
     </p>
+
     <p>
-      We present <strong>FunSeg</strong>, a closed-loop vision-language framework that enables robust task-driven 3D functional segmentation. By introducing <strong>Spatial-Sequential Instruction Tuning</strong>, we equip vision-language models with fine-grained ordinal and spatial reasoning. Furthermore, a <strong>VLM-driven feedback mechanism</strong> actively verifies 2D cues before 3D lifting, transforming fragile open-loop inference into a self-verifying process. FunSeg achieves state-of-the-art performance on the SceneFun3D benchmark.
+      To resolve these challenges, we propose <strong>FunSeg</strong>, a robust framework for task-driven 3D functional grounding that enhances spatial reasoning across modalities. 
+      We introduce <strong>spatial-sequential instruction tuning</strong> , supported by a novel hybrid semantic-geometric dataset, to empower VLMs with the fine-grained ordinal and spatial reasoning. 
+      Furthermore, we implement a VLM-driven <strong>self-verification mechanism</strong>  that actively evaluates 2D cues and filters out inconsistent perspectives before 3D lifting. 
+      FunSeg establishes a new SOTA on the SceneFun3D benchmark, demonstrating superior precision and robustness in task-driven 3D functional grounding.
     </p>
   </div>
 
   <!-- Contributions -->
   <h2>Key Contributions</h2>
   <ul class="contributions">
-    <li><strong>Closed-Loop Framework:</strong> A novel pipeline that feeds back verification signals to correct segmentation errors.</li>
+    <li><strong>Self-verification Mechanism:</strong> A novel pipeline that feeds back verification signals to correct segmentation errors.</li>
     <li><strong>Spatial-Sequential Tuning:</strong> Empowering VLMs with the ability to understand "second from left" or "top right" through targeted fine-tuning.</li>
     <li><strong>SOTA Performance:</strong> Significant improvements on the SceneFun3D benchmark compared to existing open-vocabulary methods.</li>
   </ul>
